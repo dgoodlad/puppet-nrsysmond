@@ -1,4 +1,7 @@
-class nrsysmond::configuration($license_key = $nrsysmond::license_key, $ssl_enabled = $nrsysmond::ssl_enabled) {
+class nrsysmond::configuration (
+  $license_key = $nrsysmond::license_key,
+  $ssl_enabled = $nrsysmond::ssl_enabled
+) {
   include nrsysmond::package
 
   if $license_key == undef {
