@@ -1,4 +1,4 @@
-name    'envato-geminabox'
+name    'envato-nrsysmond'
 version '0.1.0'
 summary "Installs, configures and runs New Relic's nrsysmond"
 description "Installs the `nrsysmond` New Relic server monitoring daemon, and configures the license key and SSL, and runs it as a service. Tested on Ubuntu only.
