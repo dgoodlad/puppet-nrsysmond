@@ -3,7 +3,7 @@ class nrsysmond::package {
 
   package { 'newrelic-sysmond':
     ensure  => latest,
-    require => Class["nrsysmond::repo"],
-    notify  => Class["nrsysmond::server"];
+    require => Class['nrsysmond::repo'],
+    notify  => Class['nrsysmond::server'];
   }
 }

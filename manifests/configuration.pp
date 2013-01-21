@@ -10,13 +10,13 @@ class nrsysmond::configuration (
 
   Exec { path => '/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin' }
 
-  exec { "nrsysmond-set-license-key":
+  exec { 'nrsysmond-set-license-key':
     unless  => "egrep -q '^license_key=${license_key}$' /etc/newrelic/nrsysmond.cfg",
     command => "nrsysmond-config --set license_key=${license_key}",
     notify  => Service['newrelic-sysmond'];
   }
 
-  exec { "nrsysmond-set-ssl":
+  exec { 'nrsysmond-set-ssl':
     unless  => "egrep -q '^ssl=${ssl_enabled}$' /etc/newrelic/nrsysmond.cfg",
     command => "nrsysmond-config --set ssl=${ssl_enabled}",
     notify  => Service['newrelic-sysmond'];
